@@ -77,7 +77,7 @@ onMounted(() => {
       </div>
     </div>
     <StickerOnStick
-      :src="'/src/assets/kanye.png'"
+      :src="'https://justdodo27.github.io/vue-motion/assets/kanye.png'"
       :alt="'Kanye West'"
       :outlineWidth="4"
       @click="getKanye"
