@@ -77,7 +77,7 @@ onMounted(() => {
       </div>
     </div>
     <StickerOnStick
-      :src="'https://justdodo27.github.io/vue-motion/assets/kanye.png'"
+      :src="'https://justdodo27.github.io/vue-motion/kanye.png'"
       :alt="'Kanye West'"
       :outlineWidth="4"
       @click="getKanye"
@@ -167,6 +167,7 @@ onMounted(() => {
   .container {
     grid-template-columns: 100%;
     grid-template-rows: 60vh 40vh;
+    overflow-y: hidden;
   }
 
   .quoteContainer {
