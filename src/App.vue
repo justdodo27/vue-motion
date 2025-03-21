@@ -91,10 +91,10 @@ onMounted(() => {
   display: grid;
   justify-content: center;
   align-items: center;
-  max-height: 100vh;
-  max-width: 100vw;
-  width: 100vw;
-  height: 100vh;
+  max-height: 100svh;
+  max-width: 100svw;
+  width: 100svw;
+  height: 100svh;
   position: relative;
   overflow: hidden;
   grid-template-rows: 100%;
@@ -119,7 +119,7 @@ onMounted(() => {
   background: rgba(255, 255, 255, 0.5);
   min-height: 100px;
   min-width: 200px;
-  max-width: 50vw;
+  max-width: 50svw;
   color: white;
   font-size: 3rem;
   border-radius: 20px;
@@ -166,7 +166,7 @@ onMounted(() => {
 @media only screen and (max-width: 768px) {
   .container {
     grid-template-columns: 100%;
-    grid-template-rows: 60vh 40vh;
+    grid-template-rows: 60svh 40svh;
     overflow-y: hidden;
   }
 
@@ -179,7 +179,7 @@ onMounted(() => {
   }
 
   .quote {
-    max-width: 90vw;
+    max-width: 90svw;
     font-size: 2rem;
     row-gap: 0px;
     column-gap: 10px;

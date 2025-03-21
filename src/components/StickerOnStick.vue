@@ -112,7 +112,7 @@ const getSize = computed(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 90vw;
+  max-width: 90svw;
   max-height: 100%;
 }
 
