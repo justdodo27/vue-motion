@@ -32,9 +32,13 @@ function drawSticker() {
 
   // Set canvas size
   canvas.width = img.width + props.outlineWidth * 2
-  canvas.height = img.height + props.outlineWidth * 2
+  canvas.height = img.height + props.outlineWidth * 32
   size.value.width = canvas.width
   size.value.height = canvas.height
+
+  // Draw brown stick rectangle at the bottom
+  ctx.fillStyle = '#964B00' // brown color
+  ctx.fillRect(canvas.width * 0.55, canvas.height * 0.75, canvas.width * 0.03, img.height * 0.3)
 
   const outlineWidth = props.outlineWidth
 
@@ -99,7 +103,6 @@ const getSize = computed(() => {
   >
     <canvas ref="canvasRef"></canvas>
     <img ref="imgRef" :src="src" :alt="alt" hidden />
-    <div class="stick"></div>
   </motion.div>
 </template>
 
@@ -109,20 +112,13 @@ const getSize = computed(() => {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 90vw;
+  max-height: 100%;
 }
 
 canvas {
   z-index: 1000;
   position: absolute;
-}
-
-.stick {
-  position: absolute;
-  left: 55%;
-  bottom: -90px;
-  height: 100px;
-  width: 20px;
-  background-color: sandybrown;
-  z-index: 100;
+  max-width: 100%;
 }
 </style>

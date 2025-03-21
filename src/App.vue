@@ -89,8 +89,6 @@ onMounted(() => {
 <style scoped>
 .container {
   display: grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 3fr 1fr;
   justify-content: center;
   align-items: center;
   max-height: 100vh;
@@ -99,6 +97,8 @@ onMounted(() => {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  grid-template-rows: 100%;
+  grid-template-columns: 3fr 1fr;
 }
 
 .quoteContainer {
@@ -161,5 +161,32 @@ onMounted(() => {
   backdrop-filter: blur(10.4px);
   -webkit-backdrop-filter: blur(10.4px);
   border: 1px solid rgba(255, 255, 255, 1);
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 100%;
+    grid-template-rows: 60vh 40vh;
+  }
+
+  .quoteContainer {
+    grid-row: 1;
+    grid-column: 1;
+    place-self: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .quote {
+    max-width: 90vw;
+    font-size: 2rem;
+    row-gap: 0px;
+    column-gap: 10px;
+  }
+
+  .sticker {
+    grid-row: 2;
+    grid-column: 1;
+  }
 }
 </style>
